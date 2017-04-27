@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <h1>Photos</h1>
+    <p>Express stock photo app.</p>
+    <div id="photos">
+    <% photos.forEach(function(photo) { %>
+    <div class="photo">
+      <h2><%=photo.name%></h2>
+      <img src='<%=photo.path%>'/>
+    </div>
+    <% }) %>
+   </div>
+
+   <% photos.forEach(function(photo) { %>
+<div class="photo">
+  <h2><%=photo.name%></h2>
+  <img src='/photos/<%=photo.path%>'/>
+</div>
+<% }) %>
+  </body>
+</html>
